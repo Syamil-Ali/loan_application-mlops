@@ -128,13 +128,14 @@ class DataTransformation:
             save_object(
                 file_path=self.config.preprocessor_obj_file_path,
                 obj=preprocessor
-            )
+            ) 
 
             logging.info(f"Preprocessor saved to {self.config.preprocessor_obj_file_path}")
 
             return(
                 X_train,y_train, 
-                X_test, y_test
+                X_test, y_test,
+                self.config.preprocessor_obj_file_path
             )
 
         except Exception as e:
