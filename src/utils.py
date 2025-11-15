@@ -19,6 +19,15 @@ def save_object(file_path, obj):
         raise CustomException(e, sys)
     
 
+def load_object(file_path):
+
+    try:
+        
+        file = joblib.load(file_path)
+        return file
+    
+    except Exception as e:
+        raise CustomException(e,sys)
 
 
     

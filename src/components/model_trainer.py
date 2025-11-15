@@ -97,6 +97,7 @@ class ModelTrainer:
                 "KNN": KNeighborsClassifier()
             }
 
+
             report, trained_models = evaluate_models(X_train, y_train, X_test, y_test, models) 
 
 
